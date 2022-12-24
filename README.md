@@ -17,10 +17,16 @@ The repository is organized into the following directories:
 To get started with the Python programs in this repository, follow these steps:
 
 1. Clone the repository to your local machine using Git:
+
+   ```sh
    git clone https://github.com/your-username/pythonProjects.git
+   ```
 
 2. Navigate to the directory of the Python program you want to use:
+
+   ```sh
    cd pythonProjects/calculator
+   ```
 
 3. Follow the instructions in the program's documentation to set up any necessary dependencies and run the program.
 
