@@ -6,11 +6,19 @@ Welcome to my repository of Python projects! This repository contains a collecti
 
 The repository is organized into the following directories:
 
-- `calculator`: This directory contains the source code and resources for a calculator that performs basic arithmetic operations.
-- `password_generator`: This directory contains the source code and resources for a program that generates random passwords based on user-specified criteria.
-- `temperature_converter`: This directory contains the source code and resources for a program that converts a given temperature from one scale to another.
-- `word_counter`: This directory contains the source code and resources for a program that reads a file and counts the number of occurrences of each word in the file.
-- `prime_number_generator`: This directory contains the source code and resources for a program that generates a list of prime numbers within a given range.
+- **Calculator** - A calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division). This could be developed using Python's Tkinter library and could include features such as a graphical user interface and error handling.
+
+- **Currency Converter** - A currency converter that converts a given amount from one currency to another. This could be developed using Python's Tkinter library and could include features such as a graphical user interface and error handling.
+
+- **Dice Roller** - A dice roller that simulates the rolling of a die. This could be developed using Python's Tkinter library and could include features such as a graphical user interface and error handling.
+
+- **Password Generator** - A program that generates random passwords based on user-specified criteria (length, character types). This could be developed using Python's random library and could include features such as ensuring that the generated passwords are secure and not easily guessable.
+
+- **Temperature Converter** - A program that converts a given temperature from one scale to another (Celsius to Fahrenheit, Fahrenheit to Celsius). This could be developed using Python's built-in input and output functions and could include features such as error handling and user prompts.
+
+- **Word Counter** - A program that reads a file and counts the number of occurrences of each word in the file. This could be developed using Python's built-in file handling functions and could include features such as ignoring common words (e.g. "the," "and," etc.) and sorting the results in alphabetical or numerical order.
+
+- **Prime Number Generator** - A program that generates a list of prime numbers within a given range. This could be developed using Python's math library and could include features such as checking for prime numbers using a sieve algorithm and allowing the user to specify the range of numbers to check.
 
 - **Expense Tracker Web App** - A web application that allows users to track their daily expenses and budget. This could be developed using Django and could include features such as adding and categorizing expenses, creating a budget plan, and generating reports and graphs to visualize spending habits.
 
