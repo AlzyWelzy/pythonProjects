@@ -42,7 +42,7 @@ class GuessNumber:
                 print(e)
 
     @staticmethod
-    def compG():
+    def comp_guess():
         guesses = 0
         try:
             user = int(input("Enter a positive integer between 1 to 1000000000: "))
@@ -65,4 +65,4 @@ class GuessNumber:
 
 newU = GuessNumber()
 
-newU.compG()
+newU.comp_guess()
