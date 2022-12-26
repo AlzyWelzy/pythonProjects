@@ -8,17 +8,17 @@ class Guess_Number:
 
     @staticmethod
     def hiScore(guesses):
-        with open("12Projects/guessNumber/hiScore.txt") as f:
+        with open("./12Projects/guessNumber/hiScore.txt") as f:
             curHiScore = int(f.read())
 
         if curHiScore > guesses:
-            with open('12Projects/guessNumber/hiScore.txt', "w") as f:
+            with open('./12Projects/guessNumber/hiScore.txt', "w") as f:
                 f.write(str(guesses))
                 print(
                     f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE THAT WAS {curHiScore}, YOUR NEW HIGH SCORE IS {guesses}.")
 
     def guess(self):
-        self.randNum = random.randint(1, 1000)
+        self.randNum = random.randint(1, 1000000000)
 
         while self.randNum != self.guessNum:
 
