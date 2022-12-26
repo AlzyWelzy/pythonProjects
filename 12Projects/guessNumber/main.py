@@ -1,6 +1,5 @@
 import random
 
-
 class Guess_Number:
     def __init__(self):
         self.guessNum = 0
@@ -24,7 +23,7 @@ class Guess_Number:
 
             try:
                 self.guessNum = int(
-                    input("Enter a positive integer between 1 to 1000: "))
+                    input("Enter a positive integer between 1 to 1000000000: "))
                 if self.randNum == self.guessNum:
                     print(
                         f"You managed to complete the game in {self.guesses}.")
