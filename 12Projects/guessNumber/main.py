@@ -1,20 +1,21 @@
 import random
 
-class Guess_Number:
+
+class GuessNumber:
     def __init__(self):
         self.guessNum = 0
         self.guesses = 0
 
     @staticmethod
-    def hiScore(guesses):
-        with open("./12Projects/guessNumber/hiScore.txt") as f:
-            curHiScore = int(f.read())
+    def hiscore(guesses):
+        with open("./12Projects/guessNumber/hiscore.txt") as f:
+            cur_hi_score = int(f.read())
 
-        if curHiScore > guesses:
-            with open('./12Projects/guessNumber/hiScore.txt', "w") as f:
+        if cur_hi_score > guesses:
+            with open('./12Projects/guessNumber/hiscore.txt', "w") as f:
                 f.write(str(guesses))
                 print(
-                    f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE THAT WAS {curHiScore}, YOUR NEW HIGH SCORE IS {guesses}.")
+                    f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE THAT WAS {cur_hi_score}, YOUR NEW HIGH SCORE IS {guesses}.")
 
     def guess(self):
         self.randNum = random.randint(1, 1000000000)
@@ -27,7 +28,7 @@ class Guess_Number:
                 if self.randNum == self.guessNum:
                     print(
                         f"You managed to complete the game in {self.guesses}.")
-                    self.hiScore(self.guesses)
+                    self.hiscore(self.guesses)
                 else:
                     if self.guessNum > self.randNum:
                         print("Too High")
@@ -39,7 +40,28 @@ class Guess_Number:
             except Exception as e:
                 print(e)
 
+    def compguess(self):
+        guesses=0
+        try:
+            user=int(input("Enter a positive integer between 1 to 1000000000: "))
+            comp=0
+            while user != comp:
+                comp=random.randint(1,1000000000)
+                if user == comp:
+                   print(f"Computer guesses it in {guesses}.")
+                else:
+                    if comp>user:
+                        guesses+=1
+                        print("Too High")
+                    else:
+                        guesses+=1
+                        print("Too Low")
 
-newU = Guess_Number()
+        except Exception as e:
+            print(e)
 
-newU.guess()
+
+
+newU = GuessNumber()
+
+newU.compguess()
