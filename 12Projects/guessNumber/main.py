@@ -34,7 +34,7 @@ class Guess_Number:
                         print("Too High")
                         self.guesses += 1
                     elif self.guessNum < self.randNum:
-                        print("Too High")
+                        print("Too Low")
                         self.guesses += 1
 
             except Exception as e:
