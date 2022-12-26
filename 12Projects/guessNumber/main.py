@@ -3,6 +3,7 @@ import random
 
 class GuessNumber:
     def __init__(self):
+        self.randNum = None
         self.guessNum = 0
         self.guesses = 0
 
@@ -15,7 +16,7 @@ class GuessNumber:
             with open('./12Projects/guessNumber/hiscore.txt', "w") as f:
                 f.write(str(guesses))
                 print(
-                    f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE THAT WAS {cur_hi_score}, YOUR NEW HIGH SCORE IS {guesses}.")
+                    f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE {cur_hi_score}, YOUR NEW HIGH SCORE IS {guesses}.")
 
     def guess(self):
         self.randNum = random.randint(1, 1000000000)
@@ -40,28 +41,28 @@ class GuessNumber:
             except Exception as e:
                 print(e)
 
-    def compguess(self):
-        guesses=0
+    @staticmethod
+    def compG():
+        guesses = 0
         try:
-            user=int(input("Enter a positive integer between 1 to 1000000000: "))
-            comp=0
+            user = int(input("Enter a positive integer between 1 to 1000000000: "))
+            comp = 0
             while user != comp:
-                comp=random.randint(1,1000000000)
+                comp = random.randint(1, 1000000000)
                 if user == comp:
-                   print(f"Computer guesses it in {guesses}.")
+                    print(f"Computer guesses it in {guesses}.")
                 else:
-                    if comp>user:
-                        guesses+=1
+                    if comp > user:
+                        guesses += 1
                         print("Too High")
                     else:
-                        guesses+=1
+                        guesses += 1
                         print("Too Low")
 
         except Exception as e:
             print(e)
 
 
-
 newU = GuessNumber()
 
-newU.compguess()
+newU.compG()
