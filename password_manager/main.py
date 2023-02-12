@@ -9,7 +9,7 @@ def add():
     name = input("Account Name: ")
     pwd = input("Password: ")
 
-    with open("/password_manager/passwords.txt", "a") as f:
+    with open("./password_manager/passwords.txt", "a") as f:
         f.write(name + "|" + pwd)
 
 
