@@ -27,16 +27,16 @@ class GuessNumber:
                     f"High score file not found. Creating new high score with value {guesses + 1}."
                 )
 
-    def guess(self):
-        self.randNum = random.randint(1, 1000000000)
+    def guess(self, max_value):
+        self.randNum = random.randint(1, max_value)
         while self.randNum != self.guessNum:
             try:
                 self.guessNum = int(
-                    input("Enter a positive integer between 1 to 1000000000: ")
+                    input(f"Enter a positive integer between 1 to {max_value}: ")
                 )
-                if self.guessNum < 1 or self.guessNum > 1000000000:
+                if self.guessNum < 1 or self.guessNum > max_value:
                     print(
-                        "Invalid input. Please enter a positive integer between 1 to 1000000000."
+                        "Invalid input. Please enter a positive integer between 1 to {max_value}."
                     )
                     continue
                 if self.randNum == self.guessNum:
@@ -51,22 +51,22 @@ class GuessNumber:
                         self.guesses += 1
             except ValueError:
                 print(
-                    "Invalid input. Please enter a positive integer between 1 to 1000000000."
+                    "Invalid input. Please enter a positive integer between 1 to {max_value}."
                 )
 
     @staticmethod
-    def comp_guess():
+    def comp_guess(max_value):
         guesses = 0
         try:
-            user = int(input("Enter a positive integer between 1 to 1000000000: "))
-            if user < 1 or user > 1000000000:
+            user = int(input("Enter a positive integer between 1 to max_value: "))
+            if user < 1 or user > max_value:
                 print(
-                    "Invalid input. Please enter a positive integer between 1 to 1000000000."
+                    "Invalid input. Please enter a positive integer between 1 to {max_value}."
                 )
                 return
             comp = 0
             while user != comp:
-                comp = random.randint(1, 1000000000)
+                comp = random.randint(1, max_value)
                 if user == comp:
                     print(f"Computer guesses it in {guesses + 1}.")
                 else:
@@ -78,9 +78,11 @@ class GuessNumber:
                         print("Too Low")
         except ValueError:
             print(
-                "Invalid input. Please enter a positive integer between 1 to 1000000000."
+                "Invalid input. Please enter a positive integer between 1 to {max_value}."
             )
 
 
+max_value = 100
 newU = GuessNumber()
-newU.comp_guess()
+# newU.comp_guess(max_value)
+newU.guess(max_value)
