@@ -18,7 +18,7 @@ class GuessNumber:
                 with open(hi_score_file, "w") as f:
                     f.write(str(guesses + 1))
                     print(
-                        f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE {cur_hi_score}, YOUR NEW HIGH SCORE IS {guesses + 1}."
+                        f"YOU HAVE SURPASSED YOUR PREVIOUS HIGH SCORE {cur_hi_score} GUESSES, YOUR NEW HIGH SCORE IS {guesses + 1} GUESSES."
                     )
         else:
             with open(hi_score_file, "w") as f:
