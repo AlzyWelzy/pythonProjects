@@ -40,7 +40,9 @@ class GuessNumber:
                     )
                     continue
                 if self.randNum == self.guessNum:
-                    print(f"You managed to complete the game in {self.guesses + 1}.")
+                    print(
+                        f"You managed to complete the game in {self.guesses + 1} guesses."
+                    )
                     self.hiscore(self.guesses)
                 else:
                     if self.guessNum > self.randNum:
@@ -68,7 +70,7 @@ class GuessNumber:
             while user != comp:
                 comp = random.randint(1, max_value)
                 if user == comp:
-                    print(f"Computer guesses it in {guesses + 1}.")
+                    print(f"Computer guesses it in {guesses + 1} guesses.")
                 else:
                     if comp > user:
                         guesses += 1
@@ -82,7 +84,13 @@ class GuessNumber:
             )
 
 
-max_value = 100
-newU = GuessNumber()
-# newU.comp_guess(max_value)
-newU.guess(max_value)
+print("Welcome to the Number guessing game.")
+
+try:
+    max_value = int(input("Enter a positive integer: "))
+except Exception as e:
+    print(e)
+else:
+    newU = GuessNumber()
+    # newU.comp_guess(max_value)
+    newU.guess(max_value)
