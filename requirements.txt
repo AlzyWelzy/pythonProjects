@@ -1,10 +1,11 @@
 altgraph==0.17.3
 attrs==22.2.0
 bcc==0.18.0
-black==22.12.0
+black==23.1.0
 blinker==1.4
 Brlapi==0.8.3
 certifi==2020.6.20
+cffi==1.15.1
 chardet==4.0.0
 chrome-gnome-shell==0.0.0
 click==8.0.3
@@ -16,6 +17,7 @@ dbus-python==1.2.18
 defer==1.0.6
 distro==1.7.0
 exceptiongroup==1.1.0
+gnupg==2.3.1
 hidpidaemon==18.4.6
 httplib2==0.20.2
 idna==3.3
@@ -43,6 +45,7 @@ pop-transition==1.1.2
 protobuf==3.12.4
 psutil==5.9.4
 pycairo==1.20.1
+pycparser==2.21
 pycups==2.0.1
 pydbus==0.6.0
 pygame==2.1.2
