@@ -18,7 +18,8 @@ def load_key():
     return key
 
 
-master_pwd = input("What is the master password? ")
+# master_pwd = input("What is the master password? ")
+# key = load_key() + master_pwd.encode()
 key = load_key()
 fer = Fernet(key)
 
