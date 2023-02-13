@@ -10,6 +10,7 @@ def generate_code():
     for _ in range(CODE_LENGTH):
         color = random.choice(COLORS)
         code.append(color)
+    # print(code)
     return code
 
 
@@ -42,10 +43,10 @@ def check_code(guess, real_code):
             color_counts[color] = 0
         color_counts[color] += 1
 
-    for guess_color, real_color in zip(guess, real_color):
+    for guess_color, real_color in zip(guess, real_code):
         if guess_color == real_color:
             correct_pos += 1
-            color_counts += 1
+            # color_counts += 1
             color_counts[guess_color] -= 1
 
     for guess_color, real_color in zip(guess, real_color):
@@ -60,6 +61,7 @@ def game():
     print(f"WELCOME TO mastermind, you have {TRIES} to guess the code...")
     print("The valid colors are", *COLORS)
     code = generate_code()
+
     for attempts in range(1, TRIES + 1):
         guess = guess_code()
         correct_pos, incorrect_pos = check_code(guess, code)
